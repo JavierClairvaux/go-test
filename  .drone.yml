@@ -2,5 +2,5 @@ pipeline:
   build:
     image: golang
     commands:
-      - go build
-      - go test
+      - go build main.go
+      - go run main.go
