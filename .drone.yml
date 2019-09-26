@@ -1,0 +1,15 @@
+kind: pipeline
+type: dokcer
+name: default
+
+steps:
+  - name: go build
+    image: golang
+    commands:
+      - go build
+
+trigger:
+  branch:
+    - master
+  event:
+    - tag
