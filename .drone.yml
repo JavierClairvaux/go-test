@@ -4,12 +4,13 @@ name: default
 
 steps:
   - name: go build
-    image: golang
+    image: javier1/go-goreleaser:latest
     commands:
-      - go build
+      - bash
+      - /scrypt/aws-cleaner.sh
 
 trigger:
   branch:
     - master
   event:
-    - tag
+    - push
